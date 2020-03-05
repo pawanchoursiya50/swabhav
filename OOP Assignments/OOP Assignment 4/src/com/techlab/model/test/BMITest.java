@@ -1,6 +1,6 @@
 package com.techlab.model.test;
 
-import com.techlab.model.BMI;
+import com.techlab.BMImodel.BMI;
 
 public class BMITest {
 

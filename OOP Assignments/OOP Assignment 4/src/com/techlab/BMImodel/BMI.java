@@ -1,4 +1,4 @@
-package com.techlab.model;
+package com.techlab.BMImodel;
 
 public class BMI {
 	
