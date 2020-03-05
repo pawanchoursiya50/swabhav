@@ -5,7 +5,7 @@ enum Fruit{
 	banana("yellow"),
 	blueberry("blue");
 	
-	String color;
+	final String color;
 	Fruit(String color){
 		this.color = color;
 	}
