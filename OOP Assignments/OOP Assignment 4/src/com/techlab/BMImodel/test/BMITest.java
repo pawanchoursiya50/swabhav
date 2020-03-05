@@ -1,4 +1,4 @@
-package com.techlab.model.test;
+package com.techlab.BMImodel.test;
 
 import com.techlab.BMImodel.BMI;
 
