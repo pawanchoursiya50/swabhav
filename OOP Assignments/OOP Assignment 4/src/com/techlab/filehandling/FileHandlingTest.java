@@ -28,17 +28,18 @@ public class FileHandlingTest {
 
 		// Writing to file
 		if (myFile.canWrite()) {
-			FileWriter writer = new FileWriter(myFile);
-			writer.write("java support the oop concept");
+			FileWriter writer = new FileWriter(myFile, true);
+			writer.write("java support the oop concept ");
 			writer.close();
 		} else {
 			System.out.println("Can't write into file");
 		}
 
+		// Reading from the file character wise
 		if (myFile.canRead()) {
 			FileReader reader = new FileReader(myFile);
-
 			int Charater;
+			
 			while ((Charater = reader.read()) != -1) {
 				System.out.println((char) Charater);
 			}
