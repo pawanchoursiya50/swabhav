@@ -17,6 +17,7 @@ public class BMITest {
 		
 		BMI person4 = new BMI(95, 7);
 		System.out.println(person4.catagory());
+		
 	}
 
 }
