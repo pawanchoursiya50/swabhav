@@ -1,4 +1,4 @@
-package com.techlab.enumInConstructor;
+package com.techlab.enumInConstructor.test;
 
 enum Fruit{
 	apple("red"),

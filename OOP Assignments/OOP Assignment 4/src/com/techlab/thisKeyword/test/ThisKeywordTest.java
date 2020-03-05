@@ -1,4 +1,4 @@
-package com.techlab.thisKeyword;
+package com.techlab.thisKeyword.test;
 
 public class ThisKeywordTest {
 

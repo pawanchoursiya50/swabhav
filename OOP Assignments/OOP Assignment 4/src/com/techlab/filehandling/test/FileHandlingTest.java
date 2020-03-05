@@ -1,4 +1,4 @@
-package com.techlab.filehandling;
+package com.techlab.filehandling.test;
 
 import java.io.File;
 import java.io.FileReader;
