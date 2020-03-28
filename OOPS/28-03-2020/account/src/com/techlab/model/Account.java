@@ -33,8 +33,8 @@ public class Account {
 		return MINIMUM_BALANCE;
 	}
 	
-	public static void setMinimumBalance( int amt) {
-		MINIMUM_BALANCE = amt;
+	public static void setMinimumBalance( int balance) {
+		MINIMUM_BALANCE = balance;
 	}
 	
 	public int getId() {
