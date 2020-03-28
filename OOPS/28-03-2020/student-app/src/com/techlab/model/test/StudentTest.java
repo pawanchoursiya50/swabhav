@@ -17,7 +17,12 @@ public class StudentTest {
 		
 		
 		//we can get static field by class name also
-		System.out.println(Student.count);
+		//System.out.println(Student.count); when variable will be public
+		
+		
+		System.out.println("Number od objects is : "+ Student.headCount());
+		
+		
 	
 	}
 
