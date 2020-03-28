@@ -6,6 +6,7 @@ public class Account {
 	private String name;
 	private int balance;
 	private static int MINIMUM_BALANCE;
+	private static int totalTrasactions;
 	
 	
 	static {
@@ -20,13 +21,17 @@ public class Account {
 	}
 	
 	public void withDraw(int amt) {
-		if(balance-amt <=  500) {
+		if(balance-amt >=  500) {
 			balance -= amt;
+			
+			totalTrasactions++;
 		}
 	}
 	
 	public void deposit(int amt) {
 		balance += amt;
+		
+		totalTrasactions++;
 	}
 	
 	public static int getMinimumBalance() {
@@ -47,6 +52,10 @@ public class Account {
 
 	public int getBalance() {
 		return balance;
+	}
+	
+	public static int getTotalTrasactions() {
+		return totalTrasactions;
 	}
 
 

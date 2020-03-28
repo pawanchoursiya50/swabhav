@@ -12,15 +12,23 @@ public class AccountTest {
 		Account a4 = new Account(104, "prasad", 2100);
 		
 		System.out.println("Minimum balance is : "+ Account.getMinimumBalance());
+		System.out.println("Total number of transactions is : "+ Account.getTotalTrasactions());
 		
 		printInfo(a1);
 		printInfo(a2);
 		
+		a1.deposit(200);   
+		a2.withDraw(500); //transation fail due to low balance
+		a4.withDraw(100);
+		
+		
 		Account.setMinimumBalance(1000);		
 		System.out.println("\nMinimum balance is : "+ Account.getMinimumBalance());
+		System.out.println("Total number of transactions is : "+ Account.getTotalTrasactions());
+
 		
-		printInfo(a3);
-		printInfo(a4);
+		printInfo(a1);
+		printInfo(a2);
 
 	}
 
