@@ -29,6 +29,10 @@ public class AccountTest {
 		
 		printInfo(a1);
 		printInfo(a2);
+		
+		System.out.println(a1);
+		System.out.println(a1.toString());
+
 
 	}
 
