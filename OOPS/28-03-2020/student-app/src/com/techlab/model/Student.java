@@ -1,21 +1,28 @@
-package com.techlab.modul;
+package com.techlab.model;
 
 public class Student {
 	private int id;
 	private String name;
-	private double cgpa;
-	private static int count;
+	private float cgpa;
+	public static int count;
+	
+	static {
+		count = 0;
+		System.out.println("Inside static block");
+	}
 
-	public Student(int id, String name, double cgpa) {
+	public Student(int id, String name, float cgpa) {
 		this.id = id;
 		this.cgpa = cgpa;
 		this.name = name;
 		
 		count++;
+		
+		System.out.println("Inside the constructer");
 	}
 
 	public Student(int id, String name) {
-		this(id, name, 7.0);
+		this(id, name, (float) 7.0);
 	}
 	
 	public int getStudentCount() {
@@ -30,7 +37,7 @@ public class Student {
 		return name;
 	}
 
-	public double getCgpa() {
+	public float getCgpa() {
 		return cgpa;
 	}
 }

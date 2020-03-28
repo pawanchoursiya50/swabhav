@@ -1,6 +1,6 @@
-package com.techlab.modul.test;
+package com.techlab.model.test;
 
-import com.techlab.modul.Student;
+import com.techlab.model.Student;
 
 public class StudentTest {
 
@@ -12,7 +12,7 @@ public class StudentTest {
 		Student s2 = new Student(102,"xyz");
 		System.out.println(s2.getStudentCount());
 		
-		Student s3 = new Student(103,"lmno",8.0);
+		Student s3 = new Student(103,"lmno", (float)8.4);
 		System.out.println(s3.getStudentCount());	}
 
 }
