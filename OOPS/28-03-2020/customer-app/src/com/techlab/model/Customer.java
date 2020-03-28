@@ -1,7 +1,7 @@
 package com.techlab.model;
 
 public class Customer {
-	private int id;
+	private String id;
 	private String name;
 	private int order;
 	private static int count;
@@ -15,10 +15,10 @@ public class Customer {
 		this.order = order;
 		
 		count++;
-		this.id = count;
+		this.id = "C"+count;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 	
