@@ -1,6 +1,5 @@
 package com.techlab.model;
 
-import com.sun.org.apache.xerces.internal.impl.dv.dtd.IDDatatypeValidator;
 
 public class Student {
 	private int id;
