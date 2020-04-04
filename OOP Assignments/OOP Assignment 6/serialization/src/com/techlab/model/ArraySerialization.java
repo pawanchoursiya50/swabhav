@@ -1,6 +1,8 @@
 package com.techlab.model;
 
-public class ArraySerialization {
+import java.io.Serializable;
+
+public class ArraySerialization implements Serializable{
 	
 	private int id;
 	private String name;

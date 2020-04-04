@@ -29,14 +29,14 @@ public class ArraySerializationTest {
 	}
 
 	private static void arraySerializeObject(ArraySerialization[] arr) throws IOException {
-		FileOutputStream fileOut = new FileOutputStream("account.ser");
+		FileOutputStream fileOut = new FileOutputStream(fileName);
         ObjectOutputStream out = new ObjectOutputStream(fileOut);
         
         out.writeObject(arr);
         out.close();
         fileOut.close();
         
-        System.out.println("Serialized data is stored in account.ser file");		
+        System.out.println("Object has Serialized");		
 	}
 
 	private static void arrayDeserializeObject() throws IOException, ClassNotFoundException {
