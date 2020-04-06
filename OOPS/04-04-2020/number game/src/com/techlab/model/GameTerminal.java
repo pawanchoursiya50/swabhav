@@ -33,16 +33,12 @@ public class GameTerminal {
 	public void playGame() {
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 		
-		System.out.println("Enter your guess : ");
-		userNumber = scn.nextInt();
 		randomNumber = game.generateRandomNumber();
-		arr.add(userNumber);
-
 		
 		while (!status) {
-//			System.out.println("Enter your guess : ");
-//			userNumber = scn.nextInt();
-//			arr.add(userNumber);
+			System.out.println("Enter your guess : ");
+			userNumber = scn.nextInt();
+			arr.add(userNumber);
 			
 			result = game.matchNumber(randomNumber, userNumber);
 			status = checkResult(result);
@@ -51,9 +47,6 @@ public class GameTerminal {
 				showDetails(arr);
 			} else {
 				count++;
-				System.out.println("Enter your another guess :- ");
-				userNumber = scn.nextInt();
-				arr.add(userNumber);
 			}
 		}
 	}
