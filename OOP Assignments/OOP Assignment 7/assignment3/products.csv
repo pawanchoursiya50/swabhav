@@ -1,0 +1,7 @@
+id,name,price,discount
+101,book,100,0.5
+102,book,100,0.5
+103,book,100,0.5
+,,,
+105,book,100,0.5
+106,book,,
