@@ -40,9 +40,7 @@ public class ProductTest {
 		for (int row = 0; row < totalRows; row++) {
 			if (products[row][0] != null) {
 				for (int column = 0; column < totalColumns; column++) {
-					if (products[row][column] != null)
 						System.out.print(products[row][column] + " ");
-
 				}
 				System.out.println();
 			}

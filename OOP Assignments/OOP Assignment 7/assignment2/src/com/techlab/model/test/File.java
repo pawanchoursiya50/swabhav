@@ -15,6 +15,7 @@ public class File {
 		Properties props  = new Properties();
 		props.load(input);
 		Set<String> keys = props.stringPropertyNames();
+		
 		usingForEach(keys, props);
 		
 		iterator(props);
