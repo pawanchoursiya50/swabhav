@@ -25,26 +25,28 @@ public class Inventory {
 
 	}
 
-	public Guitar[] search(Guitar SearchGuitar) {
+	public Guitar[] search(GuitarSpec wantGuitar) {
 		Guitar[] availableGuitar = new Guitar[10];
 		int possition = 0;
 
 		for (Guitar guitar : guitars) {
 			if (guitar != null) {
 				
-				if (!guitar.getModel().equalsIgnoreCase(SearchGuitar.getModel())) {
+//				GuitarSpec spec = guitar.getSpec();
+				
+				if (!guitar.getSpec().getModel().equalsIgnoreCase(wantGuitar.getModel())) {
 					continue;
 				}
-				if (!guitar.getBuilder().equals(SearchGuitar.getBuilder())) {
+				if (!guitar.getSpec().getBuilder().equals(wantGuitar.getBuilder())) {
 					continue;
 				}
-				if (!guitar.getType().equals(SearchGuitar.getType())) {
+				if (!guitar.getSpec().getType().equals(wantGuitar.getType())) {
 					continue;
 				}
-				if (!guitar.getBackWood().equals(SearchGuitar.getBackWood())) {
+				if (!guitar.getSpec().getBackWood().equals(wantGuitar.getBackWood())) {
 					continue;
 				}
-				if (!guitar.getTopWood().equals(SearchGuitar.getTopWood())) {
+				if (!guitar.getSpec().getTopWood().equals(wantGuitar.getTopWood())) {
 					continue;
 				}
 

@@ -2,6 +2,7 @@ package com.techlab.model.test;
 
 import com.techlab.model.Builder;
 import com.techlab.model.Guitar;
+import com.techlab.model.GuitarSpec;
 import com.techlab.model.Inventory;
 import com.techlab.model.Type;
 import com.techlab.model.Wood;
@@ -13,10 +14,10 @@ public class FindGuitarTester {
 		Inventory inventory = new Inventory();
 		initializeInventory(inventory);
 
-		Guitar wantGuitar = new Guitar("", 0, "fender", Builder.COLLINGS, Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
+		GuitarSpec wantGuitar = new GuitarSpec(Builder.COLLINGS, "fender", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
 
 		Guitar[] guitars = inventory.search(wantGuitar);
-		if (guitars != null) {
+		if (guitars[0] != null) {
 			printInfo(guitars);
 		} else {
 			System.out.println("No Guitar availbale according to your choice");
@@ -26,13 +27,14 @@ public class FindGuitarTester {
 	private static void printInfo(Guitar[] guitars) {
 		for (Guitar guitar : guitars) {
 			if (guitar != null) {
+				GuitarSpec spec = guitar.getSpec();
 				System.out.println("Serial number : " + guitar.getSerialNumber());
 				System.out.println("Price : " + guitar.getPrice());
-				System.out.println("Builder : " + guitar.getBuilder());
-				System.out.println("Model : " + guitar.getBuilder());
-				System.out.println("Type : " + guitar.getType());
-				System.out.println("BackWood : " + guitar.getBackWood());
-				System.out.println("TopWood : " + guitar.getTopWood() +"\n");
+				System.out.println("Builder : " + spec.getBuilder());
+				System.out.println("Model : " + spec.getBuilder());
+				System.out.println("Type : " + spec.getType());
+				System.out.println("BackWood : " + spec.getBackWood());
+				System.out.println("TopWood : " + spec.getTopWood() +"\n");
 			}
 
 		}
