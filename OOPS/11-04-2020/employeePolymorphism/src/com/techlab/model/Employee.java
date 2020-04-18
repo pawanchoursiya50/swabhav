@@ -44,6 +44,8 @@ public abstract class Employee {
 		return netSalary;
 	}
 	
+	public abstract String getSalaryDetails();
+	
 	
 	
 }

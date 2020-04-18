@@ -26,7 +26,7 @@ public abstract class Account {
 		return name;
 	}
 
-	public double getAmount() {
+	public double getBalance() {
 		return amount;
 	}
 	

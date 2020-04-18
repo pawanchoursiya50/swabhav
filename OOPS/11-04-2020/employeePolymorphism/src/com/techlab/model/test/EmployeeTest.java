@@ -21,10 +21,13 @@ public class EmployeeTest {
 	}
 
 	private static void printInfo(Employee emp) {
+		System.out.println("Employee post : "+ emp.getClass().getSimpleName());
 		System.out.println("Id = " + emp.getId());
 		System.out.println("Name = " + emp.getName());
 		System.out.println("Basic Salary = " + emp.getBasicSalary());
-		System.out.println("Anual salary = " + emp.getNetSalary() +"\n");
+		System.out.println("Anual salary = " + emp.getNetSalary());
+		System.out.println("Split up salary = "+emp.getSalaryDetails() +"\n");
+		
 
 	}
 

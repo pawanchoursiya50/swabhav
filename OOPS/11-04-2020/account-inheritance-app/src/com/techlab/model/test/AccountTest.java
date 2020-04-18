@@ -10,24 +10,26 @@ public class AccountTest {
 		SavingAccount sAcc = new SavingAccount(101, "pawan", 1000);
 		printInfo(sAcc);
 		sAcc.deposite(3000);
-		System.out.println("Amount = " + sAcc.getAmount());
+		System.out.println("Amount = " + sAcc.getBalance());
 		sAcc.withdraw(2000);
-		System.out.println("Amount = " + sAcc.getAmount());
+		System.out.println("Amount = " + sAcc.getBalance());
 
 		System.out.println("~~~~~For Current account~~~~~");
 		CurrentAccount cAcc = new CurrentAccount(102, "pankaj", 2000);
 		printInfo(cAcc);
 		cAcc.deposite(3000);
-		System.out.println("Amount = " + cAcc.getAmount());
+		System.out.println("Amount = " + cAcc.getBalance());
 		cAcc.withdraw(8000);
-		System.out.println("Amount = " + cAcc.getAmount());
+		System.out.println("Amount = " + cAcc.getBalance());
 
 	}
 
 	private static void printInfo(Account acc) {
 		System.out.println("Account no. = " + acc.getAccount());
 		System.out.println("Name = " + acc.getName());
-		System.out.println("Amount = " + acc.getAmount());
+		System.out.println("Amount = " + acc.getBalance());
+		
 	}
+	
 
 }

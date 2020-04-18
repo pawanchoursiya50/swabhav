@@ -41,23 +41,6 @@ public class Inventory {
 
 	}
 
-//				if (!guitar.getSpec().getModel().equalsIgnoreCase(wantGuitar.getModel())) {
-//					continue;
-//				}
-//				if (!guitar.getSpec().getBuilder().equals(wantGuitar.getBuilder())) {
-//					continue;
-//				}
-//				if (!guitar.getSpec().getType().equals(wantGuitar.getType())) {
-//					continue;
-//				}
-//				if (!guitar.getSpec().getBackWood().equals(wantGuitar.getBackWood())) {
-//					continue;
-//				}
-//				if (!guitar.getSpec().getTopWood().equals(wantGuitar.getTopWood())) {
-//					continue;
-//				}
-//
-//				availableGuitar[possition] = guitar;
-//				possition++;
+	
 
 }
