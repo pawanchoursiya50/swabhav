@@ -16,6 +16,7 @@ public class Guitar {
 	public GuitarSpec getSpec() {
 		return spec;
 	}
+	
 	public double getPrice() {
 		return price;
 	}

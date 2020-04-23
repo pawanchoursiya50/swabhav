@@ -53,10 +53,10 @@ public class GameTerminal {
 	
 	public static boolean checkResult(int result) {
 
-		if (result < 0) {
+		if (result == -1) {
 			System.out.println("Sorry! Too low");
 			return false;
-		} else if (result > 0) {
+		} else if (result == 1) {
 			System.out.println("Sorry! Too high");
 			return false;
 

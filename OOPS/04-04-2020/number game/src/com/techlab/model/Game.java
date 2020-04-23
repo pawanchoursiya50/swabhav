@@ -1,7 +1,5 @@
 package com.techlab.model;
 
-//import java.util.Random;
-
 public class Game {
 
 	public int generateRandomNumber() {
@@ -18,9 +16,5 @@ public class Game {
 		}
 		return 0;
 	}
-
-	public void checkCondition(boolean status) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

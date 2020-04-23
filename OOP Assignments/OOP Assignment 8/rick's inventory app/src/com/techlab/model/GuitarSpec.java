@@ -18,6 +18,28 @@ public class GuitarSpec {
 		this.numString = numString;
 	}
 	
+	public boolean match(GuitarSpec wantGuitar) {
+		
+		if (!this.model.equalsIgnoreCase(wantGuitar.getModel())) {
+			return false;
+		}
+		if (builder != wantGuitar.getBuilder() ){
+			return false;
+		}
+		if (type != wantGuitar.getType() ) {
+			return false;
+		}
+		if (backWood !=wantGuitar.getBackWood() ) {
+			return false;
+		}
+		if (topWood != wantGuitar.getTopWood() ) {
+			return false;
+		}
+		if (numString != wantGuitar.getNumString() ) {
+			return false;
+		}
+		return true;
+	}
 	
 
 	public Builder getBuilder() {
@@ -43,33 +65,6 @@ public class GuitarSpec {
 	public int getNumString() {
 
 		return numString;
-	}
-	
-	
-
-
-
-	public boolean match(GuitarSpec wantGuitar) {
-		
-		if (!model.equalsIgnoreCase(wantGuitar.getModel())) {
-			return false;
-		}
-		if (builder != wantGuitar.getBuilder() ){
-			return false;
-		}
-		if (type != wantGuitar.getType() ) {
-			return false;
-		}
-		if (backWood !=wantGuitar.getBackWood() ) {
-			return false;
-		}
-		if (topWood != wantGuitar.getTopWood() ) {
-			return false;
-		}
-		if (numString != wantGuitar.getNumString() ) {
-			return false;
-		}
-		return true;
 	}
 	
 	
