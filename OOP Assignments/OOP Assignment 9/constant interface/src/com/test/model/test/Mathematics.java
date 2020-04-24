@@ -2,7 +2,7 @@ package com.test.model.test;
 
 import com.test.model.NumberProvider;
 
-public class Mathematics implements NumberProvider {
+public class Mathematics implements INumberProvider {
 
 	public static void main(String[] args) {
 
