@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import com.techlab.model.MathematicalOperations;
 
-public class MathematicalOperationsTest {
+public class MathematicalOperationsTest_withoutDuplicate {
 
 	static MathematicalOperations math;
 	
