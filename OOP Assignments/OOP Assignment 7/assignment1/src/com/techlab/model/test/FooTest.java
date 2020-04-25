@@ -7,17 +7,36 @@ import java.lang.reflect.InvocationTargetException;
 
 public class FooTest {
 
-	static int testCase;
+	static int testCase, i;
 	static int passingTestCase;
 	static int failTestCase;
 	
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Foo foo = new Foo();
+		Method[] needToCall = new Method[10];
+		
 		Method[] methods = foo.getClass().getDeclaredMethods();
 
+		
+		//it takes all method which have @MyBeforeUnitTestCase annotation and call all method before each class
+		for(Method method : methods) {
+			if(method.isAnnotationPresent(MyBeforeUnitTestCase.class)) {
+				needToCall[i] = method;
+				i++;
+			}
+		}
+		
+		
 		for (Method method : methods) {
 			if (method.isAnnotationPresent(UnitTestCase.class)) {
 				testCase++;
+				
+				for(Method methodCall : needToCall) {
+					if(methodCall != null) {
+						methodCall.invoke(foo);
+					}
+				}
+				
 				if ((boolean) method.invoke(foo)) {
 					passingTestCase++;
 				} else

@@ -8,6 +8,7 @@ public class Foo {
 		return true;
 	}
 	
+	@UnitTestCase
 	public boolean m2() {
 		return true;
 	}
@@ -20,5 +21,10 @@ public class Foo {
 	@UnitTestCase
 	public boolean m4() {
 		return true;
+	}
+	
+	@MyBeforeUnitTestCase
+	public void bar() {
+		System.out.println("Befoer called");
 	}
 }
