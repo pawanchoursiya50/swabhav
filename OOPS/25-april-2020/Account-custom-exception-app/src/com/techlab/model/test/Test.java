@@ -16,11 +16,8 @@ public class Test {
 		}
 		catch (InsufficientFundException obj) {
 			
-			Account acc =  obj.getAcc();
-			System.out.println("Account holder "+acc.getAccNo() +", Named "+acc.getName() );
-			System.out.println("you have "+ acc.getBalance() +" balance but he tried to withdraw "+ obj.getWithdrowAmt());
-			System.out.println("But your minimum balance has to maintain "+ acc.getMINIMUM_BAL());
-			System.out.println("So the bank is not allowing you for that and Transaction has declined");
+			System.out.println(obj.getMessage());
+			
 		}
 		
 		System.out.println("\nEnd main");
