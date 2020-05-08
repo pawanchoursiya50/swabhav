@@ -1,6 +1,8 @@
 package com.techlab.model.test;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.TreeSet;
 
 public class SortTreeSetTest {
@@ -21,9 +23,11 @@ public class SortTreeSetTest {
 		
 		System.out.println(rollNo);
 		
-//		Collections.sort(rollNo);
+		List<Integer> id = new ArrayList<Integer>(rollNo);
 		
-		System.out.println(rollNo);
+		Collections.sort(id);
+		
+		System.out.println(id);
 	}
 
 }

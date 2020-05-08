@@ -1,29 +1,32 @@
 package com.techlab.model.test;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 
 public class SortHashSetTest {
 
 	public static void main(String[] args) {
 
-		HashSet<Integer> rollNo = new HashSet<Integer>();
-		rollNo.add(5);
-		rollNo.add(2);
-		rollNo.add(11);
-		rollNo.add(6);
-		rollNo.add(1);
-		rollNo.add(9);
-		rollNo.add(7);
-		rollNo.add(8);
-		rollNo.add(10);
+		HashSet<String> students = new HashSet<String>();
+		students.add("pawan");
+		students.add("jay");
+		students.add("vinay");
+		students.add("pranay");
+		students.add("sandeep");
+		students.add("prasad");
+		students.add("murtuza");
+		students.add("pratik");
+		students.add("amaey");
 		
 		
-		System.out.println(rollNo);
+		System.out.println(students);
 		
-		//Collections.sort(rollNo);
+		List<String> names = new ArrayList<String>(students);
 		
-		System.out.println(rollNo);
+		Collections.sort(names);
+		System.out.println(names);
 	}
 
 }
