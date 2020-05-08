@@ -1,5 +1,7 @@
 package com.techlab.model.test;
 
+import javax.imageio.IIOException;
+
 import com.techlab.model.Account;
 import com.techlab.model.InsufficientFundException;
 
@@ -14,11 +16,20 @@ public class Test {
 			System.out.println("Transaction successful");
 
 		}
-		catch (InsufficientFundException obj) {
-			
-			System.out.println(obj.getMessage());
-			
+		catch(Exception ex) {
+			System.out.println("In parent");
+
+			System.out.println(ex.getMessage());
 		}
+		
+//		catch (InsufficientFundException obj) {
+//			System.out.println("In Insufficiant");
+//			System.out.println(obj.getMessage());
+//			
+//		}
+		
+		
+	
 		
 		System.out.println("\nEnd main");
 	}
