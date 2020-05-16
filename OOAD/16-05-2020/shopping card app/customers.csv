@@ -1,0 +1,13 @@
+CustomerId,CustomerName,CustomerAdd,OrderNo,LineItemId,Quantity, productId,ProductName,ProductPrice
+101,kishore,mumbai,order1,10,13,101,book,50.0
+101,kishore,mumbai,order1,12,20,102,pen,10.0
+101,kishore,mumbai,order2,13,5,103,mobile,15000.0
+101,kishore,mumbai,order2,14,4,104,bag,800.0
+
+102,vishal,pune,order1,10,13,101,book,50.0
+102,vishal,pune,order1,12,20,102,pen,10.0
+102,vishal,pune,order2,13,5,103,mobile,15000.0
+102,vishal,pune,order2,14,4,104,bag,800.0
+102,vishal,pune,order3,15,3,105,laptop,32000.0
+102,vishal,pune,order3,16,5,106,mouse,500.0
+
