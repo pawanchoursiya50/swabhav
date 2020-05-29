@@ -1,4 +1,6 @@
-package com.techlab.model;
+package com.techlab.model.test;
+
+import com.techlab.model.Prasad;
 
 public class Persion {
 
