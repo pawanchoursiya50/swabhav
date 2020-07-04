@@ -1,6 +1,6 @@
 package com.techlab.model;
 
-public class message {
+public class Messages {
 
 	public static void printBoard(Board board) {
 

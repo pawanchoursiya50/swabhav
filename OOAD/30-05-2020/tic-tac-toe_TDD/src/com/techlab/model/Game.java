@@ -1,62 +1,94 @@
 package com.techlab.model;
 
+import java.util.List;
+
 public class Game {
 
-	Player player1, player2;
+//	Player player1, player2;
+	Player currentPlayer, nextPlayer;
+	List<Player> player;
 	Board board;
 	ResultAnalyzer analyzer;
-	Result result;
+	Status resultType;
 
-	public Game() {
-		// Game will create 2 player, 1 board and 1 analyzer to analyze the match
-		board = new Board();
-		player1 = new Player(Mark.O, board);
-		player2 = new Player(Mark.X, board);
-		analyzer = new ResultAnalyzer(board);
+
+	public Game(List<Player> player, Board board, ResultAnalyzer analyzer) {
+		this.board = board;
+		this.currentPlayer = player.get(0);
+		this.nextPlayer = player.get(1);
+		this.player = player;
+		this.analyzer = analyzer;
 	}
-
-	public void start() {
-		player1();
-	}
-
-	public void player1() {
-		message.printBoard(board);
-		if (player1.play()) {
-			result = analyzer.analyzeResult();
-			if (result == Result.Progress) {
-				player2();
-			} 
-			else if (result == Result.Draw) {
-				message.draw();
-				message.printBoard(board);
-			} 
-			else if (result == Result.Win) {
-				message.win(player1.getMarkofPlayer());
-				message.printBoard(board);
-			}
-
-		} else {
-			player1();
+	
+	public Status play(int possition) {
+		if(board.mark(possition, getCurrentPlayer().getMarkofPlayer())) {
+			currentPlayer = getNextPlayer();
 		}
+		Status status = analyzer.analyzeResult();
+		
+		return status;
+	}
+	
+	public Player getCurrentPlayer() {
+		return currentPlayer;
 	}
 
-	public void player2() {
-		message.printBoard(board);
-		if (player2.play()) {
-			result = analyzer.analyzeResult();
-			if (result == Result.Progress) {
-				player1();
-			} 
-			else if (result == Result.Draw) {
-				message.draw();
-				message.printBoard(board);
-			}
-			else if (result == Result.Win) {
-				message.win(player1.getMarkofPlayer());
-				message.printBoard(board);
-			}
-		} else {
-			player2();
+	public Player getNextPlayer() {
+		if(getCurrentPlayer() == player.get(0)) {
+			nextPlayer = player.get(1);
 		}
+		else {
+			nextPlayer = player.get(0);
+		}
+		
+		return nextPlayer;
 	}
+	
+//	
+//	public void start() {
+//		player1();
+//	}
+//
+//	public void player1() {
+//		message.printBoard(board);
+//		if (player1.play()) {
+//			resultType = analyzer.analyzeResult();
+//			if (resultType == Status.Progress) {
+//				player2();
+//			} 
+//			else if (resultType == Status.Draw) {
+//				message.draw();
+//				message.printBoard(board);
+//			} 
+//			else if (resultType == Status.Win) {
+//				message.win(player1.getMarkofPlayer());
+//				message.printBoard(board);
+//			}
+//
+//		} else {
+//			player1();
+//		}
+//	}
+//
+//	public void player2() {
+//		message.printBoard(board);
+//		if (player2.play()) {
+//			resultType = analyzer.analyzeResult();
+//			if (resultType == Status.Progress) {
+//				player1();
+//			} 
+//			else if (resultType == Status.Draw) {
+//				message.draw();
+//				message.printBoard(board);
+//			}
+//			else if (resultType == Status.Win) {
+//				message.win(player2.getMarkofPlayer());
+//				message.printBoard(board);
+//			}
+//		} else {
+//			player2();
+//		}
+//	}
+//	
+	
 }

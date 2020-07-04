@@ -1,5 +1,5 @@
 package com.techlab.model;
 
-public enum Result {
+public enum Status {
 	Win, Draw, Progress;
 }

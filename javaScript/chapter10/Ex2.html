@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>multiLineComment</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function selectInitialState(state) {
+ 			var selectContent = document.querySelector("#stateList");
+			var stateIndex = null;
+			  /* 
+				For the returned state, we would like to ensure that
+				we select it in our UI. This means we iterate through
+				every state in the drop-down until we find a match.
+				When a match is found, we ensure it gets selected.
+			  */
+			 for (var i = 0; i < selectContent.length; i++) {
+			    var stateInSelect = selectContent.options[i].innerText;
+			    if (stateInSelect == state) {
+					stateIndex = i;
+			    }
+			 }
+			 selectContent.selectedIndex = stateIndex;
+		}
+	</script>
+</body>
+</html>

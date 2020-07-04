@@ -2,10 +2,10 @@ package com.techlab.model;
 
 public class Cell {
 
-	private Mark mark = Mark.Empty;
+	private Mark mark ;
 
 	public Cell() {
-
+		mark = Mark.Empty;
 	}
 
 	public boolean isEmpty() {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	<div id="main">
+		<div class="pictureContainer">
+			<h2>Image1 : </h2>
+			<img class="theImage" src="smiley.png" height="150" width="150" />
+		 </div>
+
+		 <div class="pictureContainer">
+		 	<h2>Image2 : </h2>
+			<img class="theImage" src="tongue.png" height="150" width="150" />
+		 </div>
+
+		 <div class="pictureContainer">
+		 	<h2>Image3 : </h2>
+			<img class="theImage" src="meh.png" height="150" width="150" />
+		 </div>
+
+		 <div class="pictureContainer">
+		 	<h2>Image4 : </h2>
+			<img class="theImage" src="sad.png" height="150" width="150" />
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//Use of Class
+		var classElements = document.querySelectorAll(".pictureContainer");
+		for (var i = 0; i < classElements.length; i++) {
+			var attribute = classElements[i].getAttribute("src");
+			alert(attribute);
+		}
+
+		//Use of Id
+		var idElements = document.querySelectorAll("#main");
+
+		//Use of tag
+		var tagElements = document.querySelectorAll("img");
+
+
+	</script>
+</body>
+</html>

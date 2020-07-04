@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>JavaScript</title>
+
+<body>
+    <div class="main">
+        <img src="image.jpeg">
+        <div>
+
+        </div>
+        <h1> Hello </h1>
+    </div>
+
+    <script>
+        var bodyElement = document.body;
+
+        if (bodyElement.firstChild) {
+            alert("firstChild")
+        }
+
+        for (var i = 0; i < bodyElement.children.length; i++) {
+             var childElement = bodyElement.children[i];
+             document.writeln(childElement.tagName);
+        }
+
+        function theDOMElementWalker(node) {
+            if (node.nodeType == 1) {
+                document.writeln(node.tagName);
+
+                node = node.firstChild;
+
+                while (node) {
+                    hello(node);
+                    node = node.nextSibling;
+                }
+            }
+        }
+
+        var h = document.querySelector("body");
+        hello(h);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>requestAnimationFrame</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var animationId;
+		function showAlert(){
+			alert("hello world!");
+
+			animationId = requestAnimationFrame(showAlert);
+		}
+		showAlert();
+
+	</script>
+</body>
+</html>

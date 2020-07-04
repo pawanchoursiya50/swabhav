@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>javaScritp</title>
+
+<body>
+    <div id="myDiv" class="bar foo zorb">!!!</div>
+
+    <script>
+        var divElement = document.querySelector("#myDiv");
+        document.writeln("<br>" + divElement.classList + "<br>")
+
+        //add
+        divElement.classList.add("baz");
+
+        //remove
+        divElement.classList.remove("zorb");
+
+        //toggle
+        divElement.classList.toggle("foo");
+
+        divElement.classList.toggle("foo");        
+
+        divElement.classList.toggle("foo");
+
+        if(divElement.classList.contains("foo"))
+            alert(true);
+        else
+            alert(false);
+    </script>
+</body>
+
+</html>

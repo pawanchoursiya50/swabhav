@@ -12,7 +12,7 @@ public class ResultAnalyzer {
 		cells = board.cells;
 	}
 
-	public Result analyzeResult() {
+	public Status analyzeResult() {
 
 		// Checking for rows
 		for (int row = 0; row < 9; row = row + 3) {
@@ -23,7 +23,7 @@ public class ResultAnalyzer {
 				}
 			}
 			if (count == 2) {
-				return Result.Win;
+				return Status.Win;
 			}
 		}
 
@@ -35,7 +35,7 @@ public class ResultAnalyzer {
 					count++;
 				}
 				if (count == 2) {
-					return Result.Win;
+					return Status.Win;
 				}
 			}
 		}
@@ -50,18 +50,18 @@ public class ResultAnalyzer {
 				count2++;
 			}
 			if (count1 == 2 || count2 == 2) {
-				return Result.Win;
+				return Status.Win;
 			}
 		}
 		
 		//Checking for Draw or Progress
 		for(int i=0; i<9; i++) {
 			if(cells.get(i).getMark() == Mark.Empty) {
-				return Result.Progress;
+				return Status.Progress;
 			}
 		}
 		
-		return Result.Draw;
+		return Status.Draw;
 
 	}
 }
