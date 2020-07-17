@@ -15,7 +15,7 @@ public class Test {
 		
 		root.addChild(new File("xyz", 900, "avi"));
 
-		System.out.println(root.show());
+		System.out.println(root.show(1));
 	}
 
 }

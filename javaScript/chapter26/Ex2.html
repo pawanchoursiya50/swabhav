@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Element</title>
+</head>
+<body>
+
+	<h2>What's happening</h2>
+	<h2 id="demo">This is second heading</h2>
+
+	<script type="text/javascript">
+		var newElement = document.createElement("p");
+		newElement.textContent = "this is newly created Element";
+
+		var beforeElement = document.querySelector("#demo");
+		document.body.insertBefore(newElement, beforeElement);
+	</script>
+	
+</body>
+</html>

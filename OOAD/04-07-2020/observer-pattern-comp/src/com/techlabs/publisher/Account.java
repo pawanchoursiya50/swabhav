@@ -18,18 +18,19 @@ public class Account {
 
 	public void deposite(double balance) {
 		this.balance += balance;
-
-		for (IBalanceListener listener : listeners) {
-			listener.update(this);
-		}
+		callUpdate();
 	}
 
 	public void withdraw(double balance) {
 		if (this.balance - balance >= 500) {
 			this.balance -= balance;
-			for (IBalanceListener listener : listeners) {
-				listener.update(this);
-			}
+			callUpdate();
+		}
+	}
+
+	public void callUpdate() {
+		for (IBalanceListener listener : listeners) {
+			listener.update(this);
 		}
 	}
 

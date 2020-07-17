@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+	<button >click me</button>
+	<script >
+		var i = 0 ;
+		var button = document.querySelector("button");
+		button.addEventListener("mouseover", hovered, true);
+		button.addEventListener("mouseout", hoveredOut, true);
+
+		function hovered() {
+			i++;
+			alert("Button hovered "+ i);
+		}
+		function hoveredOut(){
+			alert("hovered Out");
+		}
+
+	</script>
+</body>
+</html>

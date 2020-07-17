@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove Element</title>
+</head>
+<body>
+	<h2 id="heading">What's happening</h2>
+
+	<script type="text/javascript">
+		var newElement = document.createElement("newTag");
+		newElement.textContent = "Home";
+		document.body.appendChild(newElement);
+
+		var heading = document.querySelector("h2");
+		heading.parentNode.removeChild(heading);
+
+	</script>
+</body>
+</html>

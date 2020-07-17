@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript</title>
+	<title>Object Creation</title>
 </head>
 <body>
 	<script type="text/javascript">
-		 var funnyGuy = {};
-	    funnyGuy.firstName = "Conan";
-	    funnyGuy.lastName = "O'Brien";
+	
+	var funnyguy = {};
+	funnyguy.firstName = "Conan";
+	funnyguy.lastName = "O'Brien";
+	alert("Name = "+funnyguy.firstName +" "+ funnyguy.lastName);
 
-	    var funnyGuy = {};
-	    funnyGuy["firstName"] = "Conan";
-	    funnyGuy["lastName"] = "O'Brien";
+	funnyguy["firstName"] = "Conan";
+	funnyguy["lastName"] = "O'Brien";
+	alert("Name = "+funnyguy.firstName +" "+ funnyguy.lastName);
 
-	    var funnyGuy = {
-	        firstName: "Conan",
-	        lastName: "O'Brien",
+	var funnyguy = {
+		firstName : "Conan",
+		lastName : "O'Brien",
 
-	        getName: function () {
-	            return "Name is: " + this.firstName + " " + this.lastName;
-	        }
-	    };
+		getName : function(){
+			return ("Name = "+funnyguy.firstName +" "+ funnyguy.lastName);
+		}
+	};
 
-	    alert(funnyGuy.getName());
+	alert(funnyguy.getName());
+	
+
 	</script>
 </body>
 </html>

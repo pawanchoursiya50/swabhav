@@ -3,33 +3,42 @@ package com.techlabs.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Folder implements IDiskItem {
+public class Folder implements IDiscItem {
 
 	private String name;
-	private List<IDiskItem> children = new ArrayList<>();
+	private List<IDiscItem> children = new ArrayList<>();
 
 	public Folder(String name) {
 		this.name = name;
 	}
 
-	public void addChild(IDiskItem child) {
+	public void addChild(IDiscItem child) {
 		children.add(child);
 	}
+	
 
 	@Override
-	public String show() {
-		String items = name+"\n";
-		for (IDiskItem child : children) {
-			items += (child.show()+"\n");
+	public String show(int level) {
+		String folderItems = addLevelSpaces(level)+this.name + "\n";
+		
+		for (IDiscItem child : children) {
+			if(child instanceof File)
+			folderItems = folderItems + addLevelSpaces(level+1)+child.show(level)+'\n';
+			else
+				folderItems = folderItems + child.show(level+1);
+				
 		}
-//			if(items == null) {
-//				items = (child.show());
-//			}
-//			else {
-//				items += ("\n	"+child.show());
-//			}
+		return folderItems;
 
-		return (items).toString();
+	}
+
+	public String addLevelSpaces(int level) {
+		String spaces = "";
+		for (int i = 0; i < level; i++) {
+			spaces = spaces + "\t";
+
+		}
+		return spaces;
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.techlabs.models;
 
-public class File implements IDiskItem{
+public class File implements IDiscItem{
 
 	private String name;
 	private int size;
@@ -25,8 +25,8 @@ public class File implements IDiskItem{
 	}
 
 	@Override
-	public String show() {
-		return("	"+name+"."+extension+" "+size+"MB").toString();
+	public String show(int level) {
+		return(name+"."+extension+" "+size+"MB").toString();
 	}
 	
 	

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CLoning element</title>
+</head>
+<body>
+	<div>
+		<h2 class="header">Header part</h2>
+	</div>
+
+	<div>
+		<h2 class="footer">Footer part</h2>
+	</div>
+
+	<script type="text/javascript">
+		var footerEle = document.querySelector(".footer");
+
+		var cloneEle = footerEle.cloneNode(false);
+
+		document.querySelector(".header")parentNode.appendChild(cloneEle);
+	</script>
+</body>
+</html>
