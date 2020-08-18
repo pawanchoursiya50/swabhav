@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prototype</title>
+</head>
+<body>
+
+	<script>
+		
+		function Employee(id,name){
+			this.id = id
+			this.name = name
+		}
+
+		Employee.prototype.getDetails = function(){
+			return "id is "+this.id+" name is "+this.name
+		}
+
+		var e1 = new Employee(101, 'pawan')
+		var e2 = new Employee(102, 'pankaj')
+
+		console.log(e1.getDetails())
+		console.log(e2.getDetails())
+
+		console.log(Employee.prototype == e1.__proto__)
+		console.log(e1.__proto__ == e2.__proto__)
+		console.log(Employee.prototype.__proto__ == Object.prototype)
+
+		var abc = {}
+		console.log(abc.__proto__)
+		console.log(abc.__proto__ == Object.prototype)
+
+		var msg = 'welcome'
+		console.log(msg.__proto__)
+	</script>
+</body>
+</html>

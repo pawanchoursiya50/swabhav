@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+    <div id="parent">
+        <button id="one">one</button><br>
+        <button id="two">two</button><br>
+        <button id="three">three</button><br>
+        <button id="four">four</button><br>
+        <button id="five">five</button><br>
+    </div>
+    <script>
+        var theParent = document.getElementById("parent");
+        theParent.addEventListener("click", doSomething, false);
+        function doSomething(e) {
+            if (e.target !== e.currentTarget) {
+                var clicked = e.target.id;
+                alert(clicked +" "+ "clicked");
+            }
+            e.stopPropagation();
+        }
+    </script>
+
+</body>
+</html>

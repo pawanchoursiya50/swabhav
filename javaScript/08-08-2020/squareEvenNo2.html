@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SquareEvenNo</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function SquareEvenNo(no, display) {
+			if(no%2 == 0){
+				display(no*no);
+			}
+			else{
+				display("Error : "+no +" is not a even number");
+			}
+		}
+
+		function display(msg){
+			console.log(msg);
+		}
+
+		SquareEvenNo(5, display);
+	</script>
+</body>
+</html>

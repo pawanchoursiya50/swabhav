@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QuestionBank1.html</title>
+	<style type="text/css">
+		.container{
+		    width: 70%;
+		    margin: auto;
+		    margin-top: 32px;
+		    background-color: #53758d9e;
+		    height: 650px;
+		    text-align: center;
+		    box-shadow: 2px 2px 12px 2px black;
+		}
+		.startBtn{
+			width: 20%;
+		    height: 75px;
+		    border-radius: 40px;
+		    border: none;
+		    margin-top: 200px;
+		    position: relative;
+		}
+		.content{
+			display: none;
+			padding-top: 10%;
+		}
+
+		ul{
+			text-align: left;
+			list-style: none;
+			margin-left: 20%;
+		}
+		li{
+			margin: 8px 0px;
+    		font-size: x-large;
+		}
+		.showScore{
+			display: none;
+			padding-top: 20%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div>
+			<button class="startBtn">Start</button>
+		</div>
+
+		<div class="content">
+			<h2 id="question"></h2>
+			<ul>
+				<li>
+					<input type="radio" id="1" name="option">
+					<label id="1st_option" for="1"></label>
+				</li>
+				<li>
+					<input type="radio" id="2" name="option">
+					<label id="2nd_option" for="2"></label>
+				</li>
+				<li>
+					<input type="radio" id="3" name="option">
+					<label id="3rd_option" for="3"></label>
+				</li>
+				<li>
+					<input type="radio" id="4" name="option">
+					<label id="4th_option" for="4"></label>
+				</li>
+			</ul>
+			<button id="next" onclick="checkAnswer()">Next</button>
+			<button id="finish" onclick="showResult()" style="display: none">Finish</button>
+		</div>
+
+		<div class="showScore">
+			<h2>You Scored</h2>
+			<h3 id="score"></h3>
+			<h2 id="status"></h2>
+			<button onclick="retakeExam()">Retake</button>
+		</div>
+	</div>
+	<script>
+
+		var i=0;
+		var currectAns=0;
+		var options = document.getElementsByName("option");
+
+		document.querySelector(".startBtn").addEventListener("click", hideBtn);
+
+		function hideBtn(e) {
+			e.target.parentNode.style.display = "none";
+
+			showContent();
+		}
+
+		function showContent() {
+			document.querySelector(".content").style.display = "block";
+
+			document.getElementById("question").innerHTML = questions[i].text;
+
+			document.getElementById("1st_option").innerHTML = questions[i].a;
+			options[0].value = questions[i].a;
+			document.getElementById("2nd_option").innerHTML = questions[i].b;
+			options[1].value = questions[i].b;
+			document.getElementById("3rd_option").innerHTML = questions[i].c;
+			options[2].value = questions[i].c;
+			document.getElementById("4th_option").innerHTML = questions[i].d;
+			options[3].value = questions[i].d;
+
+		}
+
+		function checkAnswer(){
+			for (var j = 0; j < options.length; j++) {
+				if(options[j].checked){
+					if(options[j].value == questions[i].answer)
+						currectAns++;
+					i++;
+					options[j].checked = false;
+					if (i < questions.length) {
+						showContent();
+					}
+					else{
+						document.querySelector("#next").style.display = "none";
+						document.querySelector("#finish").style.display = "inline-block";
+					}
+
+				}
+			}
+		}
+
+		function showResult(){
+			document.querySelector(".showScore").style.display = "inline-block";
+			document.querySelector(".content").style.display = "none";
+
+			var percentage = (currectAns/questions.length)*100;
+			document.querySelector("#score").innerHTML = percentage;
+			if(percentage < 50){
+				document.querySelector("#status").innerHTML = "fail";
+			}
+			else{
+				document.querySelector("#status").innerHTML = "pass";
+			}
+		}
+
+		function retakeExam(){
+			i=0;
+			currectAns=0;
+			document.querySelector(".showScore").style.display = "none";
+			document.querySelector("#finish").style.display = "none";
+			document.querySelector("#next").style.display = "inline-block";
+			
+			showContent();
+
+		}
+
+		
+		var questions = [];
+		var ques1 = {"id" : 101,
+					 "text" : "What is capital of India?",
+					 "answer" : "Delhi",
+					 "a" : "Mumbai",
+					 "b" : "Delhi",
+					 "c" : "Chennai",
+					 "d" : "Bangaluru"};
+		questions.push(ques1);
+
+		// var ques2 = {"id" : 102,
+		// 			 "text" : "Which is the largest coffee producing state of India?",
+		// 			 "answer" : "Karnataka",
+		// 			 "a" : "Kerala",
+		// 			 "b" : "Tamil Nadu",
+		// 			 "c" : "Karnataka",
+		// 			 "d" : "Arunachal Pradesh"};
+		// questions.push(ques2);
+
+		// var ques3 = {"id" : 103,
+		// 			 "text" : "Where is Taj Mahal located in India?",
+		// 			 "answer" : "Agra",
+		// 			 "a" : "Mumbai",
+		// 			 "b" : "Kolkata",
+		// 			 "c" : "Agra",
+		// 			 "d" : "Locknow"};
+		// questions.push(ques3);
+
+		// var ques4 = {"id" : 103,
+		// 			 "text" : "Which state has the largest area?",
+		// 			 "answer" : "Rajasthan",
+		// 			 "a" : "Maharashtra",
+		// 			 "b" : "Madhya Pradesh",
+		// 			 "c" : "Uttar Pradesh",
+		// 			 "d" : "Rajasthan"};
+		// questions.push(ques4)
+
+		// var ques5 = {"id" : 103,
+		// 			 "text" : "Earth is divided into ______ longitudinal regions.",
+		// 			 "answer" : "24",
+		// 			 "a" : "27",
+		// 			 "b" : "21",
+		// 			 "c" : "15",
+		// 			 "d" : "24"};
+		// questions.push(ques5)
+
+
+	</script>
+
+</body>
+</html>

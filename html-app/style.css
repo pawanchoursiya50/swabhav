@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  background-color: green;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+form {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#userName {
+  margin-bottom: 10px;
+}
+
+#userPass {
+  margin-bottom: 10px;
+}

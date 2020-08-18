@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>setTimeOut2</title>
+</head>
+<body>
+
+	<button>Click here</button>
+
+	<script src="../../JQuery/jquery-3.5.1.min.js"></script>
+
+	<script type="text/javascript">
+		$("button").click(function(){
+			setTimeout(showMsg, 2000);
+		});
+
+		function showMsg(){
+			alert("this is from inLine function")
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>module pattern2</title>
+  </head>
+  <body>
+    <script>
+      var service = (function () {
+        var count = 0;
+        var serviceObj = {};
+
+        serviceObj.count;
+        serviceObj.doTask1 = function () {
+          count++;
+          console.log("doing task1  " + count);
+        };
+        serviceObj.doTask2 = function () {
+          console.log("doing task2");
+        };
+        return serviceObj;
+      })();
+
+      service.doTask1();
+      service.doTask2();
+
+      service.doTask1();
+      service.doTask1();
+      service.doTask1();
+    </script>
+  </body>
+</html>

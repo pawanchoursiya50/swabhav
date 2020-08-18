@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>module pattern1</title>
+</head>
+<body>
+
+	<script>
+		function makeEmployee(){
+			var emp = {}
+			var _firstName;
+			var _lastName;
+
+			emp.setFirstName = function(firstName){
+				_firstName = firstName
+			}
+			emp.setLastName = function(lastName){
+				_lastName = lastName
+			}
+			emp.getFullName = function(){
+				return "firstName is "+_firstName+" lastName is "+_lastName
+			}
+			return emp;
+		}
+
+		var e1 = makeEmployee();
+		e1.setFirstName('pawan')
+		e1.setLastName('choursiya')
+		console.log(e1.getFullName())
+	</script>
+</body>
+</html>

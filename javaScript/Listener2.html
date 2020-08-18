@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listener2</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="colors">
+		<button id="red">red</button>
+		<button id="blue">blue</button>
+	</div>
+
+	<script type="text/javascript">
+		document.querySelector("#colors").addEventListener("click", changeColor);
+
+
+		function changeColor(ele) {
+			if(ele.target.id === "red"){
+				document.body.style.backgroundColor = "red";
+			}
+			else if (ele.target.id === "blue") {
+				document.body.style.backgroundColor = "blue";
+			}
+			
+		}
+
+	</script>
+</body>
+</html>

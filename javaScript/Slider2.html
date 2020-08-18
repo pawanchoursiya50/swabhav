@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider2</title>
+	<style type="text/css">
+		#sliderContainer{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="sliderContainer">
+		<input type="range" id="slider" value="0">
+	</div>
+
+	<div id="buttons">
+		
+	</div>
+
+	<script type="text/javascript">
+		
+		var slider = document.querySelector("#slider");
+		slider.addEventListener("input", createButton);
+
+		function createButton() {
+			var button = document.createElement("Button");
+			button.textContent = slider.value;
+			button.id = slider.value;
+			document.querySelector("#buttons").appendChild(button);
+		}
+
+		document.querySelector("#buttons").addEventListener("click", showAlert);
+
+		function showAlert(element) {
+			
+			alert("button no "+element.target.id+ " clicked");
+		}
+
+
+	</script>
+</body>
+</html>

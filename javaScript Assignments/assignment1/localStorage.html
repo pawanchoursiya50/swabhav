@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local storage</title>
+</head>
+<body>
+	<h3>This website uses local storage to store user specefice data for long period of time.</h3>
+	<h3>This data get stored on user's device which can be access after a very long period of time also.</h3>
+	<h3>It provide minimum of 5MB storege space.</h3>
+
+	<script type="text/javascript">
+
+		window.localStorage.setItem("name", "pawan");
+		localStorage.setItem("surname", "choursiya");
+		localStorage.address = "kamothe";
+		localStorage.name = "pankaj";
+
+		console.log(window.localStorage.name);
+		console.log(localStorage.getItem("surname"));
+		console.log(localStorage.address);
+
+		localStorage.removeItem("address");
+		console.log(localStorage.address);
+
+		localStorage.clear();
+
+
+	</script>
+</body>
+</html>

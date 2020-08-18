@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Listener</title>
+</head>
+<body>
+
+	<script>
+		document.addEventListener("click", changeColor);
+
+		function changeColor(e) {
+			document.body.style.backgroundColor = "yellow";
+		}
+
+		document.removeEventListener("click", changeColor);
+	</script>
+</body>
+</html>

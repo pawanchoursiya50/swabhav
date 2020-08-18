@@ -1,0 +1,28 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>Dialog Box</title>  
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+  
+   </head>  
+   <body>  
+      <div id="dialog-1" title="this is title">"This is dialog Box" </div>  
+      <button id="opener">Open Dialog</button>  
+
+      <script>  
+         $(function() {  
+            $( "#dialog-1" ).dialog({  
+               autoOpen: false,    
+            });  
+            $( "#opener" ).click(function() {  
+               $( "#dialog-1" ).dialog( "open" );  
+            });  
+         });  
+      </script>
+
+   </body>  
+</html> 

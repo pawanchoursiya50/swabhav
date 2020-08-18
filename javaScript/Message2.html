@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message2</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<label>Enter your Text : </label>
+		<input type="text" id="letter" oninput="display()">
+	</div>
+
+	<div>
+		<h1 class="output"></h1>
+	</div>
+
+	<script type="text/javascript">
+		function display(){
+			var inpuTtext = document.querySelector("#letter").value;
+
+			var outputTest = "";
+			for(var i=0; i<inpuTtext.length; i++){
+				var ascii = inpuTtext.charCodeAt(i);
+				if(ascii >= 65 && ascii <=90 || ascii >= 97 && ascii <=122){
+					outputTest += inpuTtext[i];
+				}
+			}
+			document.querySelector(".output").innerHTML = outputTest;
+		}
+	</script>
+</body>
+</html>

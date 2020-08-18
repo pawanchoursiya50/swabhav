@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color1</title>
+	<style type="text/css">
+		
+		.parent{
+			text-align: center;
+			margin-top: 50px;
+		}
+		.choices{
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<select id="selectColor" onchange="changeColor()">
+			<option>--select--</option>
+			<option value="#ffb3b3" >red</option>
+			<option value="#bbb3ff" >blue</option>
+			<option value="#d1ffb3" >green</option>
+		</select>
+	</div>
+
+
+	<script type="text/javascript">
+
+		function changeColor(){
+			var ele = document.getElementById("selectColor");
+	         var color = ele.options[ele.selectedIndex].value;
+	         document.body.style.backgroundColor = color;
+	         alert(color);
+		}
+
+		
+	</script>
+</body>
+</html>

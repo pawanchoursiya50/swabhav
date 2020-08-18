@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<span>0</span><input type="range" class="input" oninput="display()"><span>100</span>
+	</div>
+
+	<div>
+		<label>Current value is :- </label>
+		<span class="output"></span>
+	</div>
+
+	<script type="text/javascript">
+
+		function display(){
+			var number = document.querySelector(".input").value;
+
+			document.querySelector(".output").innerHTML = number;
+		}
+		
+	</script>
+</body>
+</html>

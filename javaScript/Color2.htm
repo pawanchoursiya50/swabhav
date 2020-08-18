@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color2</title>
+	<style type="text/css">
+		
+		.parent{
+			text-align: center;
+			margin-top: 50px;
+		}
+		#selectColor{
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<select id="selectColor" onchange="changeColor()">
+			<option>--select--</option>
+			<option>red</option>
+			<option>blue</option>
+			<option>green</option>
+		</select>
+	</div>
+
+	<script type="text/javascript">
+		
+		var colors =[]
+		colors.push({text:"red", value:"#ffb3b3"});
+		colors.push({text:"blue", value:"#bbb3ff"});
+		colors.push({text:"green", value:"#d1ffb3"});
+
+		function changeColor(){
+			var selected  = document.querySelector("#selectColor");
+			var color = selected.options[selected.selectedIndex].text;
+			
+			let ele = colors.find(ele => ele.text === color);
+
+			document.body.style.backgroundColor = ele.value;
+			// alert(ele.value);
+		}
+
+	</script>
+
+
+</body>
+</html>

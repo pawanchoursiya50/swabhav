@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		window.addEventListener("load", pageFullyLoaded, false);
+		document.addEventListener("DOMContentLoaded", theDomHasLoaded, false);
+
+		function theDomHasLoaded(e) {
+		    console.log("DOMContentLoaded called")
+		}
+
+		function pageFullyLoaded(e) {
+		    console.log("Load called")
+		}
+	</script>
+</body>
+</html>

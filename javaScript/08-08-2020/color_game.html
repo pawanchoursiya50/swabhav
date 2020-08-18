@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color game</title>
+	<style type="text/css">
+
+		#start_btn{
+			width: 150px;
+		    height: 50px;
+		    background-color: lawngreen;
+		    box-shadow: 3px 3px 4px 0px black;
+		    font-size: 23px;
+			}
+	</style>
+</head>
+<body>
+
+	<div id="start" >
+		<button id="start_btn" style="margin-top: 250px">Start Game</button>
+	</div>
+
+	<div id="game_body"  style="display: none;">
+		<label>Chance ramain : </label>
+		<h4 id="chance"></h4>
+	
+
+		<div id="btns">
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+			<button></button>
+		</div>
+	</div>
+
+	<div>
+		<h1></h1>
+	</div>
+
+	<!-- <script src="../../JQuery/jquery-3.5.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script>
+		$("#start").click(function(){
+			$(this).css("display","none");
+			$("#game_body").css("display","block");
+		});
+	</script>
+
+	<script >
+
+		var chance = 5;
+		showRemainingChance();
+
+		var blueBall = Math.floor(Math.random()*50)+1;
+		console.log(blueBall);
+
+		$("div").css({"width":"600px","text-align":"center","margin":"auto","margin-top":"50px"})
+		$("#btns *")
+		.css({"background-color":"gray","border":"none", "border-radius":"50px","width":"45px","height":"45px","margin":"10px"});
+
+		$("#btns *").each(function(index,element){
+			$(element).attr("id",index+1);
+		});
+
+		$("#btns *").click(function(e){
+			if(chance >0){
+				console.log(e.target.id);
+				if(e.target.id < blueBall){
+					$(this).css("background-color","red")
+				}else if(e.target.id > blueBall){
+					$(this).css("background-color","green")
+				}else{
+					$(this).css("background-color","blue");
+					$("#btns *").unbind();
+					setTimeout(showResult, 2000);
+				}
+			}
+
+			chance--;
+			showRemainingChance();
+
+			if(chance == 0){
+				$("#btns *").unbind();
+				setTimeout(endGame, 3000);
+			}
+			
+
+		});
+
+		function showResult(){
+			alert("Game is Over and you take "+(5-chance)+" attempt to finish game");
+			location.reload();
+		}
+
+		function showRemainingChance(){
+			$("#chance").text(chance);
+		}
+
+		function endGame(){
+			alert("chance over");
+			location.reload();
+		}
+	</script>
+</body>
+</html>

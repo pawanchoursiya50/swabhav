@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listener1</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<button id="red">red</button>
+		<button id="blue">blue</button>
+	</div>
+
+	<script type="text/javascript">
+		document.querySelector("#red").addEventListener("click", changeToRed);
+
+		function changeToRed() {
+			document.body.style.backgroundColor = "red";
+		}
+
+		document.querySelector("#blue").addEventListener("click", function(){
+			document.body.style.backgroundColor = "blue";
+		});
+
+	</script>
+</body>
+</html>

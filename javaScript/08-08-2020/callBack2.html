@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callBack2</title>
+</head>
+<body>
+
+	<script>
+
+		setTimeout(function(){
+			alert("after 2s invoked");
+		}, 2000);
+
+		setTimeout(display1, 4000);
+		setTimeout(display2, 6000);
+
+		function display1(){
+			alert("after 4s invoked");
+		}
+
+		function display2(){
+			alert("after 6s invoked");
+		}
+		
+	</script>
+</body>
+</html>

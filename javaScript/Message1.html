@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message1</title>
+	<style type="text/css">
+		div{
+			text-align: center;
+			margin-top: 80px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<label>Enter your Text : </label>
+		<input type="text" id="letter" oninput="display()">
+	</div>
+
+	<div>
+		<h1 class="output"></h1>
+	</div>
+
+	<script type="text/javascript">
+		function display(){
+
+			var text = document.querySelector("#letter").value;
+			document.querySelector(".output").innerHTML = text.toUpperCase();
+		}
+	</script>
+
+</body>
+</html>

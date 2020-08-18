@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow keys</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		window.addEventListener("keydown", keyPressed);
+
+		function keyPressed(e) {
+
+			if (e.keyCode == 37) {
+				alert("left key Pressed");
+			}
+			else if(e.keyCode == 38){
+				alert("up key Pressed");
+			}
+			else if(e.keyCode == 39){
+				alert("right key Pressed");
+			}
+			else if(e.keyCode == 40){
+				alert("down key Pressed");				
+			}
+		}
+	</script>
+</body>
+</html>

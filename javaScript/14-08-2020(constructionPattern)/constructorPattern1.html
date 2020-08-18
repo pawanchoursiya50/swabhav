@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Construction Pattern1</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function Stundent(id, name){
+			this.id = id
+			this.name = name
+			var age = 22
+			this.getString = function(){
+				return "id = "+this.id+" name = "+this.name
+			}
+		}
+
+		var s1 = new Stundent(101, 'pawan')
+		console.log(s1)
+		console.log(s1.id)
+		console.log(s1.name)
+		console.log(s1.getString())
+		console.log('age is '+s1.age)
+
+		var s2 = Stundent(102, 'prasad')
+		console.log(s1.age)
+
+	</script>
+</body>
+</html>

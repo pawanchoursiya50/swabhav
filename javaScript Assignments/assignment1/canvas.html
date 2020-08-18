@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas</title>
+</head>
+<body>
+	<h3>canvas is normal html element which is used to draw the graphics on webpage.</h3>
+	<h3>It provides several methods to work on it through JavaScript.</h3>
+
+	<canvas id="1st_canvas" style="width: 100%; height: 150px"></canvas>
+	<canvas id="2nd_canvas" style="width: 100%; height: 150px"></canvas>
+	<canvas id="3rd_canvas" style="width: 100%; height: 150px"></canvas>
+	<canvas id="4th_canvas" style="width: 100%; height: 150px"></canvas>
+
+	<script type="text/javascript">
+		var canvas1 = document.getElementById("1st_canvas");
+		var draw1 = canvas1.getContext("2d");
+		draw1.fillStyle = "red";
+		draw1.fillRect(0,0,50,120);
+
+		var canvas2 = document.getElementById("2nd_canvas");
+		var draw2 = canvas2.getContext("2d");
+		draw2.moveTo(0,0);
+		draw2.lineTo(50,80);
+		draw2.stroke();
+
+		var canvas3 = document.getElementById("3rd_canvas");
+		var draw3 = canvas3.getContext("2d");
+		draw3.beginPath();
+		draw3.arc(95, 50, 40, 0, 2 * Math.PI);
+		draw3.stroke();
+
+
+		var canvas4 = document.getElementById("4th_canvas");
+		var draw4 = canvas4.getContext("2d");
+		draw4.font = "30px Arial";
+		draw4.strokeText("Hello World", 10, 80);
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>login</title>
+</head>
+
+<body>
+  <div>
+    <form id="loginForm" action="action.php" method="POST" onsubmit="return checkValidation()">
+      <div>
+        <label for="userName">Name : </label>
+        <input type="text" id="userName" name="userName" /><br />
+
+        <label for="userPass">Password : </label>
+        <input type="password" id="userPass" name="userPass" /><br />
+
+        <input type="submit" />
+      </div>
+    </form>
+  </div>
+
+  <script>
+
+    function checkValidation() {
+      if (userName.value == "" || userName.value.length <= 5) {
+        alert("Please enter your user name");
+        return false;
+      } else if (userPass.value == "" || userPass.value.length <= 5) {
+        alert("Please enter your password");
+        return false;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

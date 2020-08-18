@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>session storage</title>
+</head>
+<body>
+	<h3>This website uses session storage to store user specefice data.</h3>
+	<h3>this data get deleted after closing the window</h3>
+
+	<script type="text/javascript">
+		window.sessionStorage.setItem("name" , "pawan");
+		sessionStorage.surname = "choursiya";
+
+		console.log(sessionStorage.getItem("name"));
+		console.log(sessionStorage.surname);
+
+		sessionStorage.removeItem("surname");
+		console.log(sessionStorage.surname);
+
+		sessionStorage.clear();
+	</script>
+
+</body>
+</html>
